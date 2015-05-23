@@ -29,7 +29,6 @@ public class Interfaz extends JFrame {
 	
 	JTextArea areaCodigo =new JTextArea("");	
 	JLabel lineaColumnaAreaCodigo = new JLabel("Posición del puntero :  (0,0)");
-//	JLabel labelToken = new JLabel("G-ARVIS, EL SISTEMA INTELIGENTE PARA TU CASA");	
 	JTextArea areaIn = new JTextArea("Aquí se escriben las entradas",2,5);	
 	private static final long serialVersionUID = 1L;
 
@@ -45,7 +44,6 @@ public class Interfaz extends JFrame {
 	}
 
 	public void inicializarInterfaz() {
-		//this.setJMenuBar(getMenuPrincipal());
 		this.setContentPane(getPanelPrincipal());
 		this.setTitle("PROYECTO DE DASI, Grupo G");
 	}
@@ -55,12 +53,9 @@ public class Interfaz extends JFrame {
 		BorderLayout b = new BorderLayout();
 		panelPrincipal.setLayout(b);
 		
-			JPanel panelSuperior = new JPanel(new GridLayout(1,3));			
-			panelSuperior.add(construyeAreaLenguajeP());
-//			panelPrincipal.add("North",labelToken);
-			panelPrincipal.add("Center",panelSuperior);
-	
-//		panelPrincipal.add("South",construyeAreaInferior());
+			JPanel panelControl = new JPanel(new GridLayout(1,3));			
+			panelControl.add(construyeAreaLenguajeP());
+			panelPrincipal.add("Center",panelControl);
 		return panelPrincipal;
 	}
 	
@@ -92,22 +87,7 @@ public class Interfaz extends JFrame {
 	}
 	
 	
-//	public JPanel construyeAreaInferior(){
-//		JPanel areaInferior = new JPanel();		
-//		BorderLayout bl = new BorderLayout();
-//		areaInferior.setLayout(bl);		
-//		
-//		JPanel panelBotones = new JPanel();
-//		//panelBotones.setSize(5, 5);
-//		
-//		
-//		final JButton enviarButton = new JButton("Enviar");			
-//			panelBotones.add(enviarButton);						
-//		areaInferior.add("Center", construyeAreaIn());
-//		areaInferior.add("East", construyeBoton());
-//		
-//		return  areaInferior;
-//	}
+
 
 	
 	
@@ -143,37 +123,8 @@ public class Interfaz extends JFrame {
 		return outPPanel;
 		
 	}	
-//
-//	public JPanel construyeBoton(){
-//		
-//		JPanel outPPanel = new JPanel();
-//		outPPanel.setBorder(new TitledBorder(" "));
-//		
-//		BorderLayout bl = new BorderLayout();
-//		outPPanel.setLayout(bl);		
-//	
-//		
-//		JButton btnEnviar = new JButton("ENVIAR");
-//		
-//		outPPanel.add("Center", btnEnviar);
-//		
-//		return outPPanel;
-//	}	
 
-		
-//	void leerLineasTextArea(){
-//		String text = areaCodigo.getText() ;
-//		StringTokenizer st = new StringTokenizer(text,"\n") ;
-//		while (st.hasMoreTokens()) {
-//		     String linea = st.nextToken();		
-//		     String palabra[] = linea.split(" ");
-//		     
-//		     for(int i=0; i<palabra.length;i++){
-//		    	 labelToken.setText("Token: "+palabra[i]);
-//		    	 
-//		     }
-//		}
-//	}
+
 	
 		
 	JMenuItem getSalirItem() {
